@@ -61,34 +61,25 @@ function unleashGremlins(ttl, callback) {
 //       var passwordInput = browser.element('input[id="login_pswd"]');
 
 //       passwordInput.click();
-//       console.log('.');
 //       passwordInput.setValue('');
 //       passwordInput.setValue('osbdemo123');
-//       console.log('.');
 
-//       // browser.waitForVisible('button=Sign in', 40000);
-//       browser.click('button=Sign in');
+//       //browser.click('button=Sign in');
 
-//       // var loginBox = browser.element('log_btm');
-//       // loginBox.$('input').click();
+//       var loginBox = browser.element('log_btm');
+//       loginBox.$('input').click();
       
       
-//       // var btnLogin = browser.element('.log_btm');
-//       // browser.waitForVisible('input[name="commit"]', 50000);
-//       // cajaLogIn.element('.btn_large submit').click();
-
-//       //expect(browser.getUrl()).toBe('http://demo.opensourcebilling.org/en/dashboard');
+//       expect(browser.getUrl()).toBe('http://demo.opensourcebilling.org/en/dashboard');
 //   });
 // });
 
 describe('Monkey testing with gremlins ', function () {
   browser.url('http://demo.opensourcebilling.org');  
   browser.pause(40000);
-  var loginBox = browser.element('log_btm');
-  loginBox.$('input').click();
   
-  // if(browser.getUrl() == 'http://demo.opensourcebilling.org/en/dashboard')
-  // {
+  //       var loginBox = browser.element('log_btm');
+  //       loginBox.$('input').click();
       it('it should not raise any error', function () {
         
         browser.timeoutsAsyncScript(60000);
@@ -99,9 +90,8 @@ describe('Monkey testing with gremlins ', function () {
       });
 
       afterAll(function() {
-      browser.log('browser').value.forEach(function(log) { 
-        browser.logger.info(log.message);//.split(' ')[2]);
+        browser.log('browser').value.forEach(function(log) { 
+          browser.logger.info(log.message);//.split(' ')[2]);
+        });
       });
-      });
-  //}
 });
