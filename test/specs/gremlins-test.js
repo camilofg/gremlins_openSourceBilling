@@ -78,15 +78,15 @@ describe('Monkey testing with gremlins ', function () {
   browser.url('http://demo.opensourcebilling.org');  
   browser.pause(40000);
   
-  //       var loginBox = browser.element('log_btm');
-  //       loginBox.$('input').click();
+      var loginBox = browser.element('.log_btm');
+      loginBox.$('input').click();
       it('it should not raise any error', function () {
         
         browser.timeoutsAsyncScript(60000);
         browser.executeAsync(loadScript);
       
         browser.timeoutsAsyncScript(60000);
-        browser.executeAsync(unleashGremlins, 50000);
+        browser.executeAsync(unleashGremlins, 60000);
       });
 
       afterAll(function() {
